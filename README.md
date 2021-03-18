@@ -46,6 +46,11 @@ os
 
 [See more here](https://youtu.be/C7TFgfY7JdE?t=2613)
 
+## How the web works
+**Credit: AcadeMind for the image:**
+
+![How web works image](https://i.ibb.co/Ybvg5cX/image.png)
+
 
 ## Create a server with Node Js
 
