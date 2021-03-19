@@ -76,7 +76,7 @@ const requestHandler = (req, res) => {
 
 module.exports = {
     handler: requestHandler,
-    someText: 'Some Hard Assed Text right here!!'
+    someText: 'Some Other Hard Assed Text right here!!'
 };
 
 // also can be added on the fly for example

@@ -152,6 +152,12 @@ To check the url - and do whatever.
 # NPM
 Node package manager
 
+## Commands
+
++ run - runs a script
++ install - installs a 3rd party package.   
+
+
 ## Installation
 NPM is automatically installed with nodejs.
 
@@ -172,4 +178,90 @@ However if you want to use a different script name - You can and you can use wha
 If we called the script "start-app" then we would need to type this in the terminal to run it: `npm run start-app`.
 
 
+## Using npm packages
 
+Search [NPM](https://www.npmjs.com/) for the package you want - to find out more about it.
+
+### Install a package
+
+**Example** Install nodemon - which allows refreshing of browser during development without restarting server after each change.
+
+**In the Terminal** Type `npm install nodemon --save-dev`.   
+
+    +   `--save-dev` tells node this is just something to use during development.
+    +   `--save` would install it as a production package.
+    +   `-g` will not install it in this project, but installs it globally on your machine.
+
+This will:
+    +   Update packages.json - with dependencies.
+    +   Create package-lock.json - this holds the current versions of packages. This means that if you share your project - the person getting the project will be able to install the same version of the packages.
+    +   Installs the package in node-modules - which is also created automatically when you install a package. It stores the package and all of its dependencies which also automatically get installed. The folder can be deleted to save space and siply install the packages again when required.
+
+#### How to use this nodemon package
+
+nodemon will run our app.js file for us, it will also monitor the file for changes and restart our server automatically so we can view the changes inside the browser.   
+
+So to get this working:
++   Goto our packages.json file
++   Goto the script we created called "start"
++   Change value to "nodemon app.js".
++   Note: we cannot run nodemon app.js directly in the terminal, as it looks for nodemon globally - and nodemon is only installed locally in the folder structure. Always use the usual npm start, and npm will look locally for nodemon.
+
+Now your projects server will be running and will automatically restart when some saved change is detected.
+
+
+### updating packages
+
+In the terminal type npm install. - this will go through all your packages and update them to the latest version.
+
+# Sharing your project
+When you share your projects without the node_modules folder (where local Dependencies are stored) and you can run npm install in a project to then re-create that node_modules folder. This allows you to share only your source code, hence reducing the size of the shared project vastly.
+Doing a npm install draws the info required for the installations from package.json and uses the exact version information from package-lock.json to install the correct versions.
+
+## Should i Gitignore node_modules folder?
+
+### Pros
++ Keeps the size of the repo down
++ Avoids unwanted branch conflicts when working with others
++ You can install them anytime using npm install - and npm will use the package-lock.json file to get correct versions.
+
+### Cons
++ npm might not be around forever - so would be nice to have complete code base committed.
++ An npm package might be removed by its author - leaving you with a possible big problem.
+
+### My Conclusion
+I will not commit the node_module for these lesson projects and would reccomend saving a local of cloud based backup of the node_modules for more dependant packages when doing a production project.
+
+
+# Glossary
+
+## Global Features vs Core Modules vs Third-Party Modules
+
+You can basically differentiate between:
+
+**Global features:** Keywords like const or function but also some global objects like process
+
+**Core Node.js Modules:** Examples would be the file-system module ("fs"), the path module ("path") or the Http module ("http")
+
+**Third-party Modules:** Installed via npm install - you can add any kind of feature to your app via this way
+
++   Global features are always available, you don't need to import them into the files where you want to use them.
+
++   Core Node.js Modules don't need to be installed (NO npm install is required) but you need to import them when you want to use features exposed by them.
+
+    Example:
+
+    ```const fs = require('fs');```   
+    You can now use the fs object exported by the "fs" module.
+
++   Third-party Modules need to be installed (via npm install in the project folder) AND imported.
+
+## Global & Local npm Packages
+
+The good thing about local dependencies is that you can share projects without the node_modules folder (where they are stored) and you can run npm install in a project to then re-create that node_modules folder. This allows you to share only your source code, hence reducing the size of the shared project vastly.
+
+The attached course code snippets also are shared in that way, hence you need to run npm install in the extracted packages to be able to run my code!
+
+I showed that nodemon app.js would not work in the terminal or command line because we don't use local dependencies there but global packages.
+
+You could install nodemon globally if you wanted (this is NOT required though - because we can just run it locally): npm install -g nodemon would do the trick. Specifically the -g flag ensures that the package gets added as a global package which you now can use anywhere on your machine, directly from inside the terminal or command prompt.
