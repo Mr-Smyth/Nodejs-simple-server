@@ -232,6 +232,55 @@ Doing a npm install draws the info required for the installations from package.j
 ### My Conclusion
 I will not commit the node_module for these lesson projects and would reccomend saving a local of cloud based backup of the node_modules for more dependant packages when doing a production project.
 
+...
+
+# Errors
+
+## Syntax errors
+Usually highlighted by code editor of by terminal when running the program and are useually quite specific and easy to find. Missing brackets can be troublesome but vs code, if you click on an opening curley brace - it helps by highlighting the line decending from the block of code, and you can easily see if the line is decending to a lower block.
+
+## Runtime errors
+Will not usually throw an error on starting the app, but on visiting some page an incorrect piece of logic may cause a crash. At this point go back and look in the terminal and read the error message from the top.
+
+## Logic errors
+Difficult to find/ fix as an error is not always thrown. for example plucking the wrong value from an array might not always be obvious in some big data source - and will not throw an error.
+Now you can go the consol.log route - fine for small projects but still slow. Otherwise use node debugger tool
+
+### Node debugger
+
+Node debugger has an integration into vs code 
+
+Example find bug where we are getting 'message' instead of actual message
+
++   open server file
++   Goto run in top menu and select start debugging.
++   Select nodejs option
++   Debugger will now start.
++   Now we can look into the code as its running, but to do this properly we need to setup breakpoints.
++   To set a breakpoint, go to a line of code that you believe to be pivotal in the problem, click to the left of the line number and a red dot will appear - this is now a breakpoint and many can be added.
++   Perform another operation in the application, but this time the code will pause at the breakpoint - and it is now possible to hover over variables to see what is stored inside them.
++   You can also goto view and select debug or run to view current state of variables and whats stored in them.
++   You can add a variable you want to watch here also.
++   You can view local, block or global variables, The call stack - which shows the processes executed in your code and you can also remove breakpoints.
++   It is also possible to write code into the debug terminal directly example: parsedBody.split("=") will give you the result of that in the debug terminal.
+
+#### Add configuration
+
+You can add a config to this project that will allow for the debugger to restart and various other settings
+
++   Goto run or debug in menu bar
++   Select add configuration and select nodejs - this adds a vscode folder with the launch.json file.
++   
+
+
+
+
+
+
+
+
+...
+...
 
 # Glossary
 
