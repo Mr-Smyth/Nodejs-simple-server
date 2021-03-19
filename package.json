@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-simple-server",
+  "version": "1.0.0",
+  "description": "Guide to the setup of a simple Node Sever",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-Smyth/Nodejs-simple-server.git"
+  },
+  "author": "Mr-Smyth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mr-Smyth/Nodejs-simple-server/issues"
+  },
+  "homepage": "https://github.com/Mr-Smyth/Nodejs-simple-server#readme"
+}

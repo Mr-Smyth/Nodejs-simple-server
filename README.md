@@ -147,3 +147,29 @@ To check the url - and do whatever.
 ## Summary
 
 [click Here..](https://youtu.be/C7TFgfY7JdE?t=7326)
+
+
+# NPM
+Node package manager
+
+## Installation
+NPM is automatically installed with nodejs.
+
+## Setup packages.json file
++ In the terminal - in the base folder of your project - type `npm init`.
++ Follow the prompts to enter information relating to the project.
++ Pressing enter will select a default - but these can all be edited after, directly in the file.
+
+## Setup a script within the packages.json file to run the server
+A reserved name is available for this "start" - its conventional and short so its good to use.
+
+
++ Add the following to the scripts key in the packages.json file.
+    + "start": "node app.js" - or whatever the path is to your js file.
++ now to run the application in the terminal type: `npm start`
+
+However if you want to use a different script name - You can and you can use whatever you like, but there is a difference. Because "start" is a special reserved conventional script name all we need to do to run it is type npm start.   
+If we called the script "start-app" then we would need to type this in the terminal to run it: `npm run start-app`.
+
+
+
