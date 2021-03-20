@@ -259,7 +259,7 @@ Example find bug where we are getting 'message' instead of actual message
 +   Now we can look into the code as its running, but to do this properly we need to setup breakpoints.
 +   To set a breakpoint, go to a line of code that you believe to be pivotal in the problem, click to the left of the line number and a red dot will appear - this is now a breakpoint and many can be added.
 +   Perform another operation in the application, but this time the code will pause at the breakpoint - and it is now possible to hover over variables to see what is stored inside them.
-+   You can also goto view and select debug or run to view current state of variables and whats stored in them.
++   You can also goto view and select debug or run to view current state of variables and whats stored in them. Here you can also click on them and change them to see how that affects the runtime.
 +   You can add a variable you want to watch here also.
 +   You can view local, block or global variables, The call stack - which shows the processes executed in your code and you can also remove breakpoints.
 +   It is also possible to write code into the debug terminal directly example: parsedBody.split("=") will give you the result of that in the debug terminal.
@@ -272,7 +272,11 @@ You can add a config to this project that will allow for the debugger to restart
 +   Select add configuration and select nodejs - this adds a vscode folder with the launch.json file.
 +   
 
+## Further information on Debugging NodeJs with Vs Code
 
++   [More on debugging Node.js](https://nodejs.org/en/docs/guides/debugging-getting-started/)
+
++   [Debugging NodeJs with VsCode](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
 
 
